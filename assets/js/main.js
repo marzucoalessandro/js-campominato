@@ -57,7 +57,15 @@ for (var i = 0; i < 84; i++) {
   console.log(numeriUtente);
 
 //adesso dobbiamo tirare i risultati della ns partita;
-console.log( "hai tirato " + i + " volte");
+
+//creiamo una nuova condizione:
+  if (i > 84) {
+    console.log("hai vinto!");
+  } else if (i >= 0 || i < 85) {
+    console.log( "hai tirato " + i + " volte");
+  }
+
+
 
 
 
