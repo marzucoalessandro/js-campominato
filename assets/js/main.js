@@ -36,7 +36,7 @@ var numeriUtente = [];
 
 //creiamo un ciclo per chiedere al giocatore di inserire 100-16 numeri:
 //all'interno creiamo un if con le varie condizioni del gioco;
-for (var i = 0; i < 3; i++) {
+for (var i = 0; i < 84; i++) {
 
     var domanda = Number(prompt("inserisci un numero da 0 a 100 senza ripeterlo mai altrimenti perdi"));
 
@@ -53,9 +53,12 @@ for (var i = 0; i < 3; i++) {
     } else {
       numeriUtente.push(domanda);
     }
+  }
+  console.log(numeriUtente);
 
+//adesso dobbiamo tirare i risultati della ns partita;
+console.log( "hai tirato " + i + " volte");
 
-}
 
 
 
@@ -67,11 +70,11 @@ function compare(array, numero) {
     if (array[i] == numero) {
       return true;
     }
-
-
   }
   return false;
 }
+
+
 
 
 
