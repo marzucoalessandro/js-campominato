@@ -39,18 +39,21 @@ var numeriUtente = [];
 for (var i = 0; i < 3; i++) {
 
     var domanda = Number(prompt("inserisci un numero da 0 a 100 senza ripeterlo mai altrimenti perdi"));
-    numeriUtente.push(domanda);
+
 
     if (compare(contenitoreComp, domanda) == true) {
-      console.log("hai preso una mina quindi hai perso");
+      console.log(domanda + " hai preso una mina quindi hai perso");
       break;
-    } else if (domanda == numeriUtente) {
-      console.log("hai perso ripetendo un numero");
+    } else if (compare(numeriUtente, domanda) == true) {
+      console.log("hai perso ripetendo il numero " + domanda);
     }
+    numeriUtente.push(domanda);
+
+  }
 
 
 
-}
+
 
 //creiamo una funzione per scorrere gli elementi degli array;
 function compare(array, numero) {
@@ -61,6 +64,7 @@ function compare(array, numero) {
     i++;
   }
 }
+
 
 
 
