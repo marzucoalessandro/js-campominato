@@ -12,11 +12,33 @@
    return Math.floor(Math.random() * 100) + 1;
  };
 
-//2 creaimo un array vuoto per contenere i numeri che genera il computer;
-var contenitoreComp = [];
 
-//3 adesso creiamo un ciclo che esegua la nostra funzione 16 volte e la testiamo sulla console;
-for (i = 0; i < 16; i++) {
-  console.log(generatoreNumeri(i));
-  
+
+
+ //2 creaimo un array vuoto per contenere i numeri che genera il computer;
+  var contenitoreComp = [];
+
+//3 creiamo un ciclo while per generare 16 numeri con delle condizioni:
+//3.1 se il numero generato è già presente nel ns array lo scartiamo.
+//3.2 per fare qst generiamo una funzione che controlla i numeri nel nostro array con i numeri che il computer genera;
+
+while (contenitoreComp.length < 16) {
+  var number = generatoreNumeri();
+
+  if (! comparatore(contenitoreComp, number)) {
+      contenitoreComp.push(number);
+  }
 }
+
+//creiamo la funzione per comparare gli elementi nell'array
+
+function comparatore(array, numero) {
+  var i = 0;
+  while ( i < array.length) {
+    if (numero === array[i]) {
+        return true;
+    }
+    i++
+  }
+}
+console.log(contenitoreComp);
