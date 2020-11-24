@@ -20,25 +20,62 @@
 
 //3 creiamo un ciclo while per generare 16 numeri con delle condizioni:
 //3.1 se il numero generato è già presente nel ns array lo scartiamo.
-//3.2 per fare qst generiamo una funzione che controlla i numeri nel nostro array con i numeri che il computer genera;
 
 while (contenitoreComp.length < 16) {
   var number = generatoreNumeri();
 
-  if (! comparatore(contenitoreComp, number)) {
-      contenitoreComp.push(number);
-  }
-}
-
-//creiamo la funzione per comparare gli elementi nell'array
-
-function comparatore(array, numero) {
-  var i = 0;
-  while ( i < array.length) {
-    if (numero === array[i]) {
-        return true;
-    }
-    i++
+  if (contenitoreComp.indexOf(number) == -1) {
+    contenitoreComp.push(number);
   }
 }
 console.log(contenitoreComp);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   if (! comparatore(contenitoreComp, number)) {
+//       contenitoreComp.push(number);
+//   }
+// }
+
+//creiamo la funzione per comparare gli elementi nell'array
+
+// function comparatore(array, numero) {
+//   var i = 0;
+//   while ( i < array.length) {
+//     if (numero === array[i]) {
+//         return true;
+//     }
+//     i++
+//   }
+// }
+// console.log(contenitoreComp);
+
+//abbiamo adesso i 16 numeri del nostro array;
+
+//adesso ne creeremo uno per contenere i nostri numeri;
