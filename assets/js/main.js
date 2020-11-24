@@ -7,6 +7,8 @@
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 
 
+
+
 //1 creiamo una funzione che generi numeri casuali;
  function generatoreNumeri() {
    return Math.floor(Math.random() * 100) + 1;
@@ -38,7 +40,7 @@ var numeriUtente = [];
 //all'interno creiamo un if con le varie condizioni del gioco;
 for (var i = 0; i < 84; i++) {
 
-    var domanda = Number(prompt("inserisci un numero da 0 a 100 senza ripeterlo mai altrimenti perdi"));
+    var domanda = Number(prompt("inserisci un numero da 0 a 100 senza ripeterlo...."));
 
 
     if (compare(contenitoreComp, domanda) == true) {
@@ -61,75 +63,16 @@ for (var i = 0; i < 84; i++) {
 //creiamo una nuova condizione:
   if (i > 84) {
     console.log("hai vinto!");
-  } else if (i >= 0 || i < 85) {
+  } else if (i >= 0 || i <= 84) {
     console.log( "hai tirato " + i + " volte");
   }
 
-
-
-
-
-
-
-
-//creiamo una funzione per scorrere gli elementi degli array;
-function compare(array, numero) {
-  for (var i = 0; i <= array.length; i++) {
-    if (array[i] == numero) {
-      return true;
+  //creiamo una funzione per scorrere gli elementi degli array;
+  function compare(array, numero) {
+    for (var i = 0; i <= array.length; i++) {
+      if (array[i] == numero) {
+        return true;
+      }
     }
+    return false;
   }
-  return false;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   if (! comparatore(contenitoreComp, number)) {
-//       contenitoreComp.push(number);
-//   }
-// }
-
-//creiamo la funzione per comparare gli elementi nell'array
-
-// function comparatore(array, numero) {
-//   var i = 0;
-//   while ( i < array.length) {
-//     if (numero === array[i]) {
-//         return true;
-//     }
-//     i++
-//   }
-// }
-// console.log(contenitoreComp);
-
-//abbiamo adesso i 16 numeri del nostro array;
-
-//adesso ne creeremo uno per contenere i nostri numeri;
