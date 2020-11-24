@@ -30,6 +30,37 @@ while (contenitoreComp.length < 16) {
 }
 console.log(contenitoreComp);
 
+//adesso dobbiamo creare un nuovo array che sia il contenitore dei ns numeri.
+
+var numeriUtente = [];
+
+//creiamo un ciclo per chiedere al giocatore di inserire 100-16 numeri:
+//all'interno creiamo un if con le varie condizioni del gioco;
+for (var i = 0; i < 3; i++) {
+
+    var domanda = Number(prompt("inserisci un numero da 0 a 100 senza ripeterlo mai altrimenti perdi"));
+    numeriUtente.push(domanda);
+
+    if (compare(contenitoreComp, domanda) == true) {
+      console.log("hai preso una mina quindi hai perso");
+      break;
+    } else if (domanda == numeriUtente) {
+      console.log("hai perso ripetendo un numero");
+    }
+
+
+
+}
+
+//creiamo una funzione per scorrere gli elementi degli array;
+function compare(array, numero) {
+  for (var i = 0; i <= array.length; i++) {
+    if (array[i] == numero) {
+      return true;
+    }
+    i++;
+  }
+}
 
 
 
