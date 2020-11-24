@@ -45,11 +45,17 @@ for (var i = 0; i < 3; i++) {
       console.log(domanda + " hai preso una mina quindi hai perso");
       break;
     } else if (compare(numeriUtente, domanda) == true) {
-      console.log("hai perso ripetendo il numero " + domanda);
+      console.log("hai ripetuto il numero " + domanda);
+      i--;
+    } else if (domanda < 1 || domanda > 100){
+      console.log("hai inserito un numero sbagliato");
+      i--;
+    } else {
+      numeriUtente.push(domanda);
     }
-    numeriUtente.push(domanda);
 
-  }
+
+}
 
 
 
@@ -61,8 +67,10 @@ function compare(array, numero) {
     if (array[i] == numero) {
       return true;
     }
-    i++;
+
+
   }
+  return false;
 }
 
 
